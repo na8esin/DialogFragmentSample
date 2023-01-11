@@ -16,7 +16,6 @@ import androidx.fragment.app.FragmentManager
  * create an instance of this fragment.
  */
 class SimpleDialogFragment : DialogFragment() {
-
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val builder = AlertDialog.Builder(activity)
         val inflater = requireActivity().layoutInflater
@@ -25,16 +24,8 @@ class SimpleDialogFragment : DialogFragment() {
         return builder.create()
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_simple_dialog, container, false)
-    }
-
     companion object {
-        const val  TAG = "SimpleDialogFragment"
+        private const val TAG = "SimpleDialogFragment"
         /**
          * Use this factory method to create a new instance.
          * @return A new instance of fragment SimpleDialogFragment.

@@ -16,8 +16,16 @@ class TopFragment : Fragment(){
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_top, container, false)
         val button = view.findViewById<Button>(R.id.button)
+        val button2 = view.findViewById<Button>(R.id.button2)
+
+        // このDialogは何もしなくてもkeyboardがでる
         button.setOnClickListener {
             SimpleDialogFragment.show(parentFragmentManager)
+        }
+
+        // RecyclerViewだからkeyboardがでない！
+        button2.setOnClickListener {
+            RecyclerViewDialogFragment.show(parentFragmentManager)
         }
         return view
     }
