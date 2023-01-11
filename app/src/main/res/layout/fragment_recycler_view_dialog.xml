@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- https://stackoverflow.com/questions/21250931/soft-keyboard-doesnt-show-when-using-adapter-in-dialogfragment/26400540#26400540 -->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
